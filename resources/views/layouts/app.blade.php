@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'ScrapeX') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -21,16 +21,19 @@
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
 <body>
-    <div id="app">
-        @include('inc.navbar')
-        <main class="py-4">
+<div id="app">
+    @include('inc.navbar')
+    <main class="py-4">
+        <div class="container">
+            @include('inc.messages')
             @yield('content')
-        </main>
-        @include('inc.footer')
-    </div>
-    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
-    <script>
-        CKEDITOR.replace( 'article-ckeditor' );
-    </script>
+        </div>
+    </main>
+    @include('inc.footer')
+</div>
+<script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('article-ckeditor');
+</script>
 </body>
 </html>
