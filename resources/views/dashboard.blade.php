@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    Dashboard
+@endsection
+
 @section('content')
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -24,8 +28,8 @@
                             <tbody>
                             @foreach($posts as $post)
                                 <tr>
-                                    <td><a href="/posts/{{$post->id}}">{{$post->title}}</a></td>
-                                    <td><a href="/posts/{{$post->id}}/edit" class="btn btn-outline-dark">Edit</a></td>
+                                    <td><a href="{{url('/posts/'.$post->id)}}">{{$post->title}}</a></td>
+                                    <td><a href="{{url('/posts/'.$post->id.'/edit')}}" class="btn btn-outline-dark">Edit</a></td>
                                     <td>
                                         {!! Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'float-right']) !!}
                                         {{Form::hidden('_method', 'DELETE')}}
@@ -41,7 +45,7 @@
                             You don't have any posts yet :(
                         </div>
                     @endif
-                    <a href="/posts/create" class="btn btn-outline-primary float-right">Create Post</a>
+                    <a href="{{url('/posts/create')}}" class="btn btn-outline-primary float-right">Create Post</a>
                 </div>
             </div>
         </div>

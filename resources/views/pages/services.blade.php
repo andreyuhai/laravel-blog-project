@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('title')
+    Services
+@endsection
+
+
 @section('content')
         <h1>{{$title}}</h1>
         @if(count($services) > 0)
