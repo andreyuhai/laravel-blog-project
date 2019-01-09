@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="text-center col-md-12 col-lg-3 col-sm-12 col-12">
-                <h2 class="logo"><a href="/">ScrapeX</a></h2>
+                <h2 class="logo"><a href="/pwbs">ScrapeX</a></h2>
             </div>
             <div class="text-center offset-lg-0 col-lg-2 col-md-2 offset-md-1 col-sm-4 offset-0 col-4">
                 <h5>Get started</h5>

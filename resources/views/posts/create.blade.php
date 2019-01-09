@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    Create Post
+@endsection
+
 @section('content')
     <h1 class="text-center">Create post</h1>
     {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
