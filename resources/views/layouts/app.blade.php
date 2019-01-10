@@ -11,6 +11,13 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/jquery-3.3.1.js') }}"></script>
+    {{--<script src="{{ asset('js/custom.js') }}"></script>--}}
+    <script>
+        $(document).ready(function(){
+            $.getScript("{{asset("js/custom.js")}}");
+        });
+    </script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -31,7 +38,7 @@
     </main>
     @include('inc.footer')
 </div>
-<script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+<script src="{{asset('vendor/unisharp/laravel-ckeditor/ckeditor.js')}}"></script>
 <script>
     CKEDITOR.replace('article-ckeditor');
 </script>
