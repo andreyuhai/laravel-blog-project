@@ -119,11 +119,12 @@ class PostsController extends Controller
 
         // Check for correct user
 
-        if (auth()->user()->id != $post->user_id) {
-            return redirect('/posts')->with('error', 'Unauthorized page');
+        if (auth()->user()->hasRole('admin') || auth()->user()->id == $post->user_id) {
+            return view('posts.edit')->with('post', $post);
         }
 
-        return view('posts.edit')->with('post', $post);
+        return redirect('/posts')->with('error', 'Unauthorized page');
+
     }
 
     /**
