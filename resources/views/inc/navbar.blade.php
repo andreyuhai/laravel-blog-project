@@ -47,8 +47,10 @@
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{url('/dashboard')}}">Dashboard</a>
+                            @role('admin')
+                            <a class="dropdown-item" href="{{url('/admin-panel')}}">Admin Panel</a>
+                            @endrole
                             <a class="dropdown-item" href="{{url('/posts/create')}}">Create Post</a>
-
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
