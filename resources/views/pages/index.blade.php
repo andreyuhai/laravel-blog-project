@@ -14,13 +14,26 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="..." class="d-block w-100" alt="...">
+                <img src="{{url('/storage/slider_images/ales-nesetril-734016-unsplash.jpg')}}" class="d-block w-100 h-50" alt="ScrapeX">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>ScrapeX</h5>
+                    <p>A perfect web scrape tool designed just for your needs!</p>
+                </div>
+
             </div>
             <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
+                <img src="{{url('/storage/slider_images/anas-alshanti-169265-unsplash.jpg')}}" class="d-block w-100 h-25 alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>See Plans</h5>
+                    <p>You can make the most of our paid memberships!</p>
+                </div>
             </div>
             <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
+                <img src="{{url('/storage/slider_images/fabian-irsara-92113-unsplash.jpg')}}" class="d-block w-100 h-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Which websites?</h5>
+                    <p>Amazon, Aliexpres ...</p>
+                </div>
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
