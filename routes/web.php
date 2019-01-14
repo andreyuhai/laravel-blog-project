@@ -14,8 +14,10 @@
 Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/services', 'PagesController@services');
+Route::get('/admin-panel', 'AdminPanelController')->middleware(['auth', 'verified', 'role:admin']);
 
 Route::resource('posts', 'PostsController');
+
 
 Auth::routes(['verify' => true]);
 
