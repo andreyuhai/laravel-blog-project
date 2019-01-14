@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class AdminPanelController extends Controller
 {
@@ -15,7 +16,13 @@ class AdminPanelController extends Controller
     public function __invoke(Request $request)
     {
 
-        return view('pages.admin_panel')->with('title', 'Admin Panel');
+        $data = array(
+
+            'users' => User::orderBy('id', 'asc')->paginate(10),
+            'title' => 'Admin Panel'
+
+        );
+        return view('pages.admin_panel')->with($data);
 
     }
 }
